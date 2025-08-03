@@ -1,0 +1,37 @@
+@JaamJCSAssessment_HostAddress = http://localhost:5126
+
+# Authentication
+POST {{JaamJCSAssessment_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "Password123!",
+  "role": "User"
+}
+
+###
+
+POST {{JaamJCSAssessment_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "Password123!"
+}
+
+###
+
+# Tasks API
+GET {{JaamJCSAssessment_HostAddress}}/api/tasks
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+
+###
+
+GET {{JaamJCSAssessment_HostAddress}}/api/tasks/my-tasks
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+
+###
