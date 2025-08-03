@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using Domain.Clean;
 using System.Security.Claims;
 
@@ -43,7 +44,7 @@ namespace Infrastructure.Clean.AuthorizationHandlers
             {
                 case DatabaseOperation.ReadTasks:
                     // Users can read tasks they're assigned to or open tasks
-                    var accessibleTasks = await _context.TaskItems
+                    var accessibleTasks = await _context.Tasks
                         .Where(t => t.AssigneeId == currentUserId || 
                                    t.Status == "Open" ||
                                    t.CreatedById == currentUserId)
@@ -68,7 +69,7 @@ namespace Infrastructure.Clean.AuthorizationHandlers
 
                 case DatabaseOperation.WriteTasks:
                     // Users can only write to tasks they're assigned to
-                    var assignedTasks = await _context.TaskItems
+                    var assignedTasks = await _context.Tasks
                         .Where(t => t.AssigneeId == currentUserId)
                         .CountAsync();
                     

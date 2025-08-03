@@ -1,7 +1,11 @@
 # Task Management System - Backend API
 
-A task management system built with ASP.NET Core 8.0 that I designed to handle complex project workflows with proper separation of concerns and it's built with scalability and maintainability in mind.
-I used Cursor + Visual Studio code, Developed a strategy with Gemini + Claude, then was able to speed up the process further by offloading simple tasks to ai agents while developing the core components + architecture / creations etc personally. 
+A task management system built with ASP.NET Core 8.0 that I designed to handle complex project workflows with proper separation of concerns and it's built with scalability and maintainability in mind. Not fully implemented but I wanted to show understanding of all the components and patterns that would be required for a full implementation.
+
+I used Cursor + Visual Studio, Developed a strategy with Gemini + Claude, then was able to speed up the process further by offloading simple tasks to ai agents while developing the core components + architecture / creations etc personally. 
+
+I first Identified what frameworks I wanted to use, then how I should seperate concerns. I identified that i would most likely need to demonstrate Authentication + Authorization understanding + event management + notification handling so I spent most time on these concepts and after about 2 hours I cut myself off.
+
 Please refer to my "Context-referer" Spelled without the referrer "r" was just as speed typing issue that I found amusing to keep using. I used this system to help me with the development processes (I made this context referring system as if its a local MCP enabler.) Ask AI how cool it really is :D
 
 
